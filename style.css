@@ -9,6 +9,7 @@
 .right{
     flex: 30%;
     font-size: 2em;
+    height: 95vh;
 }
 
 .left{
