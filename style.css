@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+}
+.right{
+    flex: 30%;
+    font-size: 2em;
+}
+
+.left{
+    flex: 70%;
+    font-size: 2em;
+    height: 95vh;
+    padding:1em;
+    border-right: 1px solid black;
+
+}
