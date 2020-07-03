@@ -17,10 +17,22 @@ const productKeys = Object.keys(productList)
 const leftDiv = document.getElementById("left")
 
 createCard = (name) => `
-<div>
-    <img src="media/${name}.png" alt="grocery image">
+<div class="item">
+    <img src="media/${name}.png" alt="grocery image" draggable='true' ondragstart='onDragStart(event)' id="${name}">
     <p>${name} price : ${productList[name]} </p>
 </div>
 `
 
+onDragStart = (event) => {
+    event.dataTransfer.setData('text/plain', event.target.id)
+    console.log(event.target.id)
+}
+
+onDragOver = (event) => {
+    event.preventDefault();
+  }
+
+onDrop = (event) => {
+    console.log(event.dataTransfer.getData('text')+" dropped")
+}
 productKeys.forEach((item)=>leftDiv.innerHTML += createCard(item))
