@@ -3,19 +3,52 @@
     box-sizing: border-box;
 }
 
+.header{
+    text-align: center;
+    font-size: 5vw;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
 .row{
     display: flex;
 }
 .right{
     flex: 30%;
     font-size: 2em;
-    height: 95vh;
+    height: 87vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.basket{
+    flex:30%;
+}
+
+.bill{
+    flex:40%;
+    font-size: 1.6vw;
+    margin-bottom: 8vh;
+}
+
+#table{
+    width:100%;
+    margin-top: 2vh;
+    font-size: 1.2vw;
+}
+.total{
+    flex:2%;
+    font-size: 3.2vw;
 }
 
 .left{
     flex: 70%;
     font-size: 2em;
-    height: 95vh;
+    height: 87vh;
     padding:1em;
     border-right: 1px solid black;
 
@@ -37,4 +70,9 @@
 img {
     max-width:100%;
     max-height:100%;
+}
+
+.right img{
+    width: 50%;
+    
 }
